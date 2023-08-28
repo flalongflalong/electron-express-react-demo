@@ -5,6 +5,8 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const { httpPort } = require('../appConfig/index');
 
+const b = require('./routers/upload2baiduyun')
+
 dotenv.config()
 
 const isDev = process.env.NODE_ENV === 'development';
