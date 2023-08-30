@@ -6,9 +6,9 @@
 	"scripts": {
 		"start": "chcp 65001 && electron .",
 		"dev": "concurrently \"webpack --watch\" \"electron .\"",
-		"package:win": "electron-packager . --electronVersion=26.0.0 --overwrite --platform=win32 --arch=x64 --out=out --icon=assets/app-icon/win/app.ico --ignore=\"(^/config|^/src|^/out|^/routers|^/gulp|.vscode|.github|.gitignore|.prettierrc.js|.babelrc|^/webpack|exemple)\" && gulp --gulpfile gulp/gulpfile.js setEnvProduction",
+		"win": "electron-packager . --electronVersion=26.0.0 --overwrite --platform=win32 --arch=x64 --out=out --icon=assets/app-icon/win/app.ico --ignore=\"(^/config|^/src|^/out|^/routers|^/gulp|.vscode|.github|.gitignore|.prettierrc.js|.babelrc|^/webpack|exemple)\" && gulp --gulpfile gulp/gulpfile.js setEnvProduction",
 		"clearOut": "gulp --gulpfile gulp/gulpfile.js clearOut",
-		"killProcess": "gulp --gulpfile gulp/gulpfile.js killProcess"
+		"kill": "gulp --gulpfile gulp/gulpfile.js killProcess"
 	},
 	"repository": "https://github.com/electron/electron-quick-start",
 	"keywords": [
