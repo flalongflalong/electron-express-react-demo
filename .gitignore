@@ -1,6 +1,7 @@
 node_modules
 /dist
 /out
+/src/res/HYPE
 .gitignore
 .DS_Store
 .prettierrc
