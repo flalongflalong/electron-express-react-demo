@@ -23,6 +23,15 @@ function serverInit() {
 		res.send('Welcome to your express API');
 	});
 
+	app.get('/res/:resourceName', (req, res) => {
+		const resourcePath = path.join(__dirname, 'res', req.params.resourceName);
+		res.sendFile(resourcePath);
+	});
+
+	// Catch all other routes and redirect to the index page
+	app.get('*', (req, res) => {
+		res.redirect('/');
+	});
 	//port
 	app.listen(httpPort, () => console.log(`App running on port ${httpPort} 🔥`));
 }

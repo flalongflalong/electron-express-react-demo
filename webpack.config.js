@@ -1,6 +1,7 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const pkg = require('./package.json');
 
 module.exports = {
@@ -47,6 +48,11 @@ module.exports = {
 		new CopyWebpackPlugin({
 			patterns: [{ from: './src/favicon.ico' }, { from: './src/assets', to: 'assets' }],
 		}),
+		new CopyPlugin({
+			patterns: [
+			  { from: 'src/res', to: 'res' }  // 这将复制src/res到输出目录下的res
+			],
+		  }),
 	],
 	devtool: 'eval',
 };
